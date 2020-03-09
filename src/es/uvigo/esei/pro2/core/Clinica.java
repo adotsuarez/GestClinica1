@@ -53,9 +53,24 @@ public class Clinica {
         return pacientes.length;
     }
 
+    public Paciente mayor() {
+        Paciente toret = new Paciente("","","",0);
+        int ano = 0;
+        for (int i = 0; i < getNumPacientes(); i++) {
+            if (ano > pacientes[i].getAno()) {
+                toret = pacientes[i];
+            }
+        }
+
+        return toret;
+    }
+
     /** Inserta un nuevo paciente
      * @param p el nuevo objeto Paciente
      */
+
+
+
     public void inserta(Paciente p) {
         final int maxPacientes = getMaxPacientes();
 

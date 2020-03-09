@@ -52,6 +52,10 @@ public class Ilc {
                     //visualiza(coleccion);
                     System.out.print(coleccion.toString());
                     break;
+                case 5:
+                    //visualiza(paciente más edad);
+                    System.out.println(coleccion.mayor().toString());
+                    break;
                 default:
                     System.out.println("No es correcta esa opción (" 
                                         + op + ")");
@@ -100,6 +104,7 @@ public class Ilc {
                             + "2. Modifica un paciente\n"
                             + "3. Elimina un paciente\n"
                             + "4. Listar pacientes\n"
+                            + "5. Paciente más edad\n"
                             + "0. Salir\n");
             toret = leeNum("Selecciona: ");
         } while (toret < 0 && toret > 4);
