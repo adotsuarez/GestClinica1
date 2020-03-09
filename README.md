@@ -20,5 +20,5 @@ El objetivo del programa consiste en gestionar los pacientes de una clínica hos
 
 ## Creadores y licencias
 
-- El programa fue creado originalmente por _'nrufino'_ y está siendo modificado por el equipo de ASJDevs ['adotsuarez', 'jatope' y 'sarosaaurio'].
+- El programa fue creado originalmente por _'nrufino'_ y está siendo modificado por el equipo de ASJDevs [_'adotsuarez'_, _'jatope'_ y _'saroosaurioo'_].
 - Para más información sobre licencias, por favor, lee el archivo LICENSE.
