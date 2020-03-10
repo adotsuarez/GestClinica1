@@ -54,10 +54,9 @@ public class Clinica {
     }
 
     public Paciente mayor() {
-        Paciente toret = new Paciente("","","",0);
-        int ano = 0;
-        for (int i = 0; i < getNumPacientes(); i++) {
-            if (ano > pacientes[i].getAno()) {
+        Paciente toret = new Paciente("","","",pacientes[0].getAno());
+        for (int i = 0; i < numPacientes; i++) {
+            if (pacientes[i].getAno() < toret.getAno()) {
                 toret = pacientes[i];
             }
         }
