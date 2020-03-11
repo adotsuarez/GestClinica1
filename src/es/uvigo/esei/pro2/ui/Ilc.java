@@ -193,16 +193,21 @@ public class Ilc {
         }
         
         // Año
-        System.out.print("Año de nacimiento del paciente ");
-        if (p.getAno() > 0) {
-            System.out.print("[" + p.getAno() + "]");
-        }
-        System.out.print(": ");
-        info = teclado.nextLine().trim();
-
-        if (info.length() > 0) {
-            p.setAno(Integer.parseInt(info));
-        }
+        boolean repite;
+        do {
+            repite = false;
+            try {
+                System.out.print("Año de nacimiento del paciente ");
+                if (p.getAno() > 0) {
+                    System.out.print("[" + p.getAno() + "]");
+                }
+                System.out.print(": ");
+                info = teclado.nextLine().trim();
+                p.setAno(Integer.parseInt(info));
+            } catch (NumberFormatException exc) {
+                repite = true;
+            }
+        } while (repite);
 
         /*
         // Tipo de atención
@@ -266,10 +271,22 @@ public class Ilc {
      */
     private char leeCaracter(String msg)
     {
+        boolean repite;
+        char toret = '\n';
         Scanner teclado = new Scanner (System.in);
 
-        System.out.print(msg);
-        return (teclado.nextLine().trim().charAt(0));             
+        do {
+            repite = false;
+            System.out.print(msg);
+
+            try {
+                toret = teclado.nextLine().trim().charAt(0);
+            } catch (Exception exc) {
+                repite = true;
+            }
+        } while (repite);
+
+        return toret;
     }
     
     /**

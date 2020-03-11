@@ -73,13 +73,20 @@ public class Clinica {
     public void inserta(Paciente p) {
         final int maxPacientes = getMaxPacientes();
 
+        /*
         if (getNumPacientes() >= maxPacientes) {
             System.err.println("inserta(): sobrepasa max.: " + maxPacientes);
             System.exit(-1);
         }
+         */
 
-        pacientes[ numPacientes ] = p;
-        ++numPacientes;
+        try {
+            pacientes[numPacientes] = p;
+            ++numPacientes;
+        } catch (IndexOutOfBoundsException exc) {
+            System.err.println("inserta(): sobrepasa max.: " + maxPacientes);
+            System.exit(-1);
+        }
     }
 
     public void elimina(int pos) {
